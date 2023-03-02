@@ -1,0 +1,12 @@
+<launch>
+    <!-- Node -->
+
+    <arg name="image_topic" default="/camera_fl/image_color" />
+    <node name="laneattNode" pkg="laneatt_ros" type="main.py" output="screen" respawn="true">
+           <remap from="~image_topic" to="$(arg image_topic)"/>
+    </node>
+        
+
+</launch>
+
+
