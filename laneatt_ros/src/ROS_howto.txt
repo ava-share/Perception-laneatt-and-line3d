@@ -9,9 +9,14 @@ and save it in your desired directory (this is the path in line 18 you need to c
 
 in main.py change lines: 7 (path to the laneatt_ros folder), 8(path to your anaconda environment), 18 (model path) to match your paths setup
 in lib/runner.py change the image topic name to the one in the rosbag (line 73) (run rosbag info *bagname*.bag)
+
+catkin_make as with any other ros package
+
+to run: 
 in terminal: 
 cd catkin_ws/src/laneatt_ros
 
 conda activate laneatt
 roslaunch laneatt_ros laneattLaunch.launch 
 
+roslaunch line3d line3dLaunch.launch (change type to "lineRealCoordinateAVA.py")
