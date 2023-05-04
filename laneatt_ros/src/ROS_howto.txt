@@ -3,15 +3,15 @@ Ubuntu 18.04.06 LTS
 ROS melodic
 Python 3.8.18
 
+before running: 
+download the model from here: https://drive.google.com/drive/folders/15fItvrMmvbqwSciT5pQTmAZBq4U_Yffj?usp=share_link 
+and save it in your desired directory (this is the path in line 18 you need to change) 
+
+in main.py change lines: 7 (path to the laneatt_ros folder), 8(path to your anaconda environment), 18 (model path) to match your paths setup
+in lib/runner.py change the image topic name to the one in the rosbag (line 73) (run rosbag info *bagname*.bag)
 in terminal: 
 cd catkin_ws/src/laneatt_ros
 
-
 conda activate laneatt
-
-
-python main.py test --exp_name laneatt_r34_culane_final_annotations
-
-
 roslaunch laneatt_ros laneattLaunch.launch 
 
